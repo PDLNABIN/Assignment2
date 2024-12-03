@@ -1,0 +1,789 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 81.8071,28.4688 ]
+    },
+    "properties": {
+    "Roll.no":1,
+    "Name":"Laxmi Acharya ",
+    "Municipality":"Lekbeshi ",
+    "District":"Surkhet ",
+    "Province":"Karnali "
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 85.545535,27.62172 ]
+    },
+    "properties": {
+    "Roll.no":2,
+    "Name":"Rajkumar Acharya",
+    "Municipality":"Dhulkhel",
+    "District":"Kavrepalanchok",
+    "Province":"Bagmati"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 87.996627,26.925247 ]
+    },
+    "properties": {
+    "Roll.no":4,
+    "Name":"Kanchan Adhikari",
+    "Municipality":"Maijogmai",
+    "District":"Illam",
+    "Province":"Koshi"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 80.608063,28.683359 ]
+    },
+    "properties": {
+    "Roll.no":5,
+    "Name":"Ashish Ayer",
+    "Municipality":"Dhangadhi ",
+    "District":"Kailali",
+    "Province":"Sudurpaschim"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 85.574875,27.600693 ]
+    },
+    "properties": {
+    "Roll.no":6,
+    "Name":"Asmita Banepali",
+    "Municipality":"Dhulikhel",
+    "District":"Kavrepalanchok",
+    "Province":"Bagmati"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 87.695726,26.665894 ]
+    },
+    "properties": {
+    "Roll.no":7,
+    "Name":"Pragyan Baral",
+    "Municipality":"Damak",
+    "District":"Jhapa",
+    "Province":"Koshi"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 83.9713219,28.218218 ]
+    },
+    "properties": {
+    "Roll.no":8,
+    "Name":"Saditya Baral",
+    "Municipality":"Pokhara",
+    "District":"Kaski",
+    "Province":"Gandaki"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 87.2837681,26.6761285 ]
+    },
+    "properties": {
+    "Roll.no":9,
+    "Name":"Givsan Bhattarai",
+    "Municipality":"Itahari",
+    "District":"Sunsari",
+    "Province":"Koshi"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 83.326453,27.68908 ]
+    },
+    "properties": {
+    "Roll.no":10,
+    "Name":"Madhav Bhattarai",
+    "Municipality":"Sainamaina ",
+    "District":"Rupandehi ",
+    "Province":"Lumbini "
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 85.3348676,27.7277628 ]
+    },
+    "properties": {
+    "Roll.no":11,
+    "Name":"Prabhat Bhusal",
+    "Municipality":"KMC",
+    "District":"Kathmandu",
+    "Province":"Bagmati"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 81.4562,29.1141 ]
+    },
+    "properties": {
+    "Roll.no":12,
+    "Name":"Kasheb Bista",
+    "Municipality":"panchadewal binayak ",
+    "District":"Achham",
+    "Province":"Sudurpaschim"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 87.688815,26.652889 ]
+    },
+    "properties": {
+    "Roll.no":13,
+    "Name":"Bibhuti Budhathoki",
+    "Municipality":"Damak",
+    "District":"Jhapa",
+    "Province":"Koshi"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 82.49,28.63 ]
+    },
+    "properties": {
+    "Roll.no":14,
+    "Name":"Santosh Budhathoki",
+    "Municipality":"musikot",
+    "District":"rukum west",
+    "Province":"Karnali"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 82.49,28.63 ]
+    },
+    "properties": {
+    "Roll.no":15,
+    "Name":"Abhinav Chand",
+    "Municipality":"musikot",
+    "District":"rukum west",
+    "Province":"Karnali"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 83.432426,27.686386 ]
+    },
+    "properties": {
+    "Roll.no":16,
+    "Name":"Shrija Dhakal",
+    "Municipality":"Butwal",
+    "District":"Rupandehi",
+    "Province":"Lumbini"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 81.3248,28.4501 ]
+    },
+    "properties": {
+    "Roll.no":17,
+    "Name":"Ishwor Pd. Dhital",
+    "Municipality":"ThakurBaba",
+    "District":"Bardiya",
+    "Province":"Lumbini"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 87.997793,27.01287 ]
+    },
+    "properties": {
+    "Roll.no":18,
+    "Name":"Salina Gurung",
+    "Municipality":"Sandakpur",
+    "District":"ilam",
+    "Province":"koshi"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 83.0469,27.5518 ]
+    },
+    "properties": {
+    "Roll.no":19,
+    "Name":"Krishna Gyawali",
+    "Municipality":"kapivastu",
+    "District":"kapilvastu",
+    "Province":"lumbini"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 80.2434,28.9514 ]
+    },
+    "properties": {
+    "Roll.no":20,
+    "Name":"Harish Hamal ",
+    "Municipality":"Bedkot",
+    "District":"Kanchanpur ",
+    "Province":"Sudurpaschim"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 80.321312,28.8372 ]
+    },
+    "properties": {
+    "Roll.no":21,
+    "Name":"Ayush Joshi",
+    "Municipality":"bhemdatt",
+    "District":"kanchanpur",
+    "Province":"sudurpaschim"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 80.608063,28.683359 ]
+    },
+    "properties": {
+    "Roll.no":22,
+    "Name":"Dipendra Joshi",
+    "Municipality":"Dhangadhi",
+    "District":"Kailali ",
+    "Province":"Sudurpaschim"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 80.608063,28.683359 ]
+    },
+    "properties": {
+    "Roll.no":23,
+    "Name":"Pragya Joshi",
+    "Municipality":"Dhangadhi ",
+    "District":"Kailali ",
+    "Province":"Sudurpaschim"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 85.460427,27.652567 ]
+    },
+    "properties": {
+    "Roll.no":25,
+    "Name":"Mansun Khadka",
+    "Municipality":"Suryabinyak ",
+    "District":"Bhaktapur ",
+    "Province":"Bagmati"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 81.63935,28.597609 ]
+    },
+    "properties": {
+    "Roll.no":27,
+    "Name":"Shisir Kharel",
+    "Municipality":"Birendranagar",
+    "District":"Surkhet",
+    "Province":"Karnali"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 85.3222,27.7103 ]
+    },
+    "properties": {
+    "Roll.no":28,
+    "Name":"Prajina Khatiwada",
+    "Municipality":"Kathmandu Metropolitan City",
+    "District":"Kathmandu",
+    "Province":"Bagmati"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 87.293874,26.460719 ]
+    },
+    "properties": {
+    "Roll.no":29,
+    "Name":"Rishav Khatiwada",
+    "Municipality":"Biratnagar",
+    "District":"Morang",
+    "Province":"Koshi"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 81.7787,28.5175 ]
+    },
+    "properties": {
+    "Roll.no":30,
+    "Name":"Anil Gharti Magar",
+    "Municipality":"Birendranagar",
+    "District":"Surkhet",
+    "Province":"Karnali"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 85.3174,27.7471 ]
+    },
+    "properties": {
+    "Roll.no":31,
+    "Name":"Nalina Maharjan",
+    "Municipality":"Baniyatar ",
+    "District":"Kathmandu ",
+    "Province":"Bagmati "
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 85.4592,26.9816 ]
+    },
+    "properties": {
+    "Roll.no":32,
+    "Name":"Alok Mahato",
+    "Municipality":"Barahathawa",
+    "District":"Sarlahi",
+    "Province":"Madhesh"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 86.019274,26.882195 ]
+    },
+    "properties": {
+    "Roll.no":33,
+    "Name":"Kamlesh Mahato",
+    "Municipality":"Dhanushadham",
+    "District":"Dhanusha",
+    "Province":"Madhesh"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 85.536011,27.609037 ]
+    },
+    "properties": {
+    "Roll.no":34,
+    "Name":"Aman Manandhar",
+    "Municipality":"Panauti 5, ",
+    "District":"Kavre",
+    "Province":"Bagmati"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 85.54281,27.6221 ]
+    },
+    "properties": {
+    "Roll.no":35,
+    "Name":"Sneha Manandhar",
+    "Municipality":"Dhulikhel-5,Shreekhandapur",
+    "District":"Kavre",
+    "Province":"Bagmati"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 87.7200067,26.6371595 ]
+    },
+    "properties": {
+    "Roll.no":36,
+    "Name":"Saurav Nepal",
+    "Municipality":"Kamal",
+    "District":"Jhapa",
+    "Province":"Koshi"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 84.08501,28.03275 ]
+    },
+    "properties": {
+    "Roll.no":37,
+    "Name":"Niruta Neupane",
+    "Municipality":"Shuklagandaki",
+    "District":"Tanahun",
+    "Province":"Gandaki"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 83.4880231,27.6195894 ]
+    },
+    "properties": {
+    "Roll.no":39,
+    "Name":"Gaurav Pandey",
+    "Municipality":"Tilottama",
+    "District":"Rupandehi",
+    "Province":"Lumbini"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 85.034972,27.424008 ]
+    },
+    "properties": {
+    "Roll.no":41,
+    "Name":"Kartabya Paudel",
+    "Municipality":"Hetauda",
+    "District":"Makwanpur",
+    "Province":"Bagmati"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 85.380966,27.675008 ]
+    },
+    "properties": {
+    "Roll.no":42,
+    "Name":"Nabin Poudel",
+    "Municipality":"Madhyapur Thimi",
+    "District":"Bhaktapur",
+    "Province":"Bagmati"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 83.3362,28.6029 ]
+    },
+    "properties": {
+    "Roll.no":43,
+    "Name":"Sudipta Poudel",
+    "Municipality":"Beni",
+    "District":"Myagdi",
+    "Province":"Gandaki"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 82.3235,28.1545 ]
+    },
+    "properties": {
+    "Roll.no":44,
+    "Name":"Ishan Regmi",
+    "Municipality":"Tulsipur",
+    "District":"Dang",
+    "Province":"lumbini"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 85.70891,26.965957 ]
+    },
+    "properties": {
+    "Roll.no":45,
+    "Name":"Nabin Kumar Sah",
+    "Municipality":"Ishworpur-14",
+    "District":"Sarlahi",
+    "Province":"Madhesh"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 87.24,27.0124 ]
+    },
+    "properties": {
+    "Roll.no":46,
+    "Name":"Ritesh Sah",
+    "Municipality":"Barahathawa",
+    "District":"Sarlahi",
+    "Province":"Madesh"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 85.52,27.6584 ]
+    },
+    "properties": {
+    "Roll.no":49,
+    "Name":"Namrata Shrestha",
+    "Municipality":"Dhulikhel",
+    "District":"Kavre",
+    "Province":"Bagmati"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 85.390131,27.662746 ]
+    },
+    "properties": {
+    "Roll.no":50,
+    "Name":"Rijan Shrestha",
+    "Municipality":"Dhulikhel-5",
+    "District":"Kavre",
+    "Province":"Bagmati"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 85.649438,27.560664 ]
+    },
+    "properties": {
+    "Roll.no":51,
+    "Name":"Jenish Silwal",
+    "Municipality":"Namobuddha-4",
+    "District":"Kavre",
+    "Province":"Bagmati"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 85.9509,26.9509 ]
+    },
+    "properties": {
+    "Roll.no":52,
+    "Name":"Sagar Singh",
+    "Municipality":"Mithila",
+    "District":"Dhanusha",
+    "Province":"Madhesh"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 85.539406,27.623705 ]
+    },
+    "properties": {
+    "Roll.no":53,
+    "Name":"Sumita Tamang",
+    "Municipality":"Dhulikhel",
+    "District":"Kavre",
+    "Province":"Bagmati"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 85.54281,27.6221 ]
+    },
+    "properties": {
+    "Roll.no":55,
+    "Name":"Romika Thapa",
+    "Municipality":"Dhulikhel-04",
+    "District":"Kavre",
+    "Province":"Bagmati"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 81.3248,28.4501 ]
+    },
+    "properties": {
+    "Roll.no":56,
+    "Name":"Deepak Tharu",
+    "Municipality":"Geruwa-3",
+    "District":"Bardiya",
+    "Province":"lumbini"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 85.5245411,27.6290226 ]
+    },
+    "properties": {
+    "Roll.no":57,
+    "Name":"Anup raj Timalsina",
+    "Municipality":"Banepa",
+    "District":"Kavre",
+    "Province":"Bagmati"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 85.371,27.6463 ]
+    },
+    "properties": {
+    "Roll.no":59,
+    "Name":"Isha Yadav",
+    "Municipality":"Mahalaxmi",
+    "District":"Lalitpur",
+    "Province":"Bagmati"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 85.2383,26.9398 ]
+    },
+    "properties": {
+    "Roll.no":60,
+    "Name":"Shivnandan Ray Yadav",
+    "Municipality":"Dewahi-Gonahi",
+    "District":"Rautahat",
+    "Province":"Madhesh"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 87.27972,26.81436 ]
+    },
+    "properties": {
+    "Roll.no":61,
+    "Name":"Ashim Gautam",
+    "Municipality":"Dharan",
+    "District":"Sunsari",
+    "Province":"Koshi"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 83.9739472,28.224802 ]
+    },
+    "properties": {
+    "Roll.no":62,
+    "Name":"Ayushma Adhikari",
+    "Municipality":"Pokhara",
+    "District":"Kaski",
+    "Province":"Gandaki"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 85.5355,27.6598 ]
+    },
+    "properties": {
+    "Roll.no":64,
+    "Name":"Nista Shrestha",
+    "Municipality":"Banepa",
+    "District":"Kavre",
+    "Province":"Bagmati"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 85.51833,27.63071 ]
+    },
+    "properties": {
+    "Roll.no":65,
+    "Name":"Nikita Shrestha",
+    "Municipality":"Banepa",
+    "District":"Kavre",
+    "Province":"Bagmati"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 86.053,27.4469 ]
+    },
+    "properties": {
+    "Roll.no":66,
+    "Name":"Urmila Subedi",
+    "Municipality":"Ramechhap ",
+    "District":"Ramechhap ",
+    "Province":"Bagmati "
+    }
+  }
+]
+}
