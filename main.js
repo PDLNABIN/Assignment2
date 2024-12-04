@@ -17,9 +17,30 @@ fetch("data/students.geojson").then(response=>{
         let studentCooordinates= feature.geometry.coordinates;
         let lat = studentCooordinates[ 1];
         let long= studentCooordinates[0];
-        let studentHouse = L.marker([lat,long],{icon: myIcon})
+        var studentHouse = L.marker([lat,long],{icon: myIcon})
         myMarkerGroup.addLayer(studentHouse);
-        map.on("click", function(ev){
+        var studentName = feature.properties.Name;
+        var rollNo= feature.properties["Roll.no"];
+        var municipality= feature.properties.Municipality;
+
+        var districtStudent= feature.properties.District;
+        var studentPoup= `<div>
+        <h4>Name:${studentName}</h4>
+        <h4> Roll No:${rollNo}</h4>
+        <h4>District:${districtStudent} </h4>
+        <h4> District:${municipality}</h4>
+
+        </div>`
+
+       
+
+
+
+
+        studentHouse.on("click", function(ev){
+            studentHouse.bindPopup(studentPoup).openPopup()
+           
+            
             
         })
     });
@@ -60,12 +81,29 @@ fetch("data/wholeNepal.geojson")
 
 });
 
+// api for weather
+
+axios.get('https://api.openweathermap.org/data/2.5/weather?q=Kathmandu,np&appid=16a2508dc0d12c0ec8438cd2681d164b')
+
+  .then(function (response) {
+    // handle success
+    console.log(response);
+  })
+  .catch(function (error) {
+    // handle error
+    console.log(error);
+  })
+  .finally(function () {
+    // always executed
+  });
+
 
 var baseLayers= {"OSM":osm }
 var overLays = {"Students":myMarkerGroup, "Country":nepalLayer,"Provinces":provincesLayer,"Municipalities":muniLayer, "Districts":districts };
 
 
 L.control.layers(baseLayers, overLays).addTo(map);
+
 
 
 
