@@ -105,7 +105,7 @@ map.on('click', function(ev) {
           padding: 10px;
           border-radius: 8px;
           text-align: center;">
-          <img src="data/rain.png" class="weather-icon" alt="Weather icon" style="width: 50px;">
+          
 
 
             <h1 style="font-size: 30px;">${(response.data.main.temp - 273.15).toFixed(1)}°C</h1>
