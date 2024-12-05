@@ -35,10 +35,12 @@ fetch("data/students.geojson").then(response=>{
        
 
 
-
+        //I later found the problem like if i close some poup and opened same popup it will not open again
+        //to solve this issue we have to first  bind the popup and the display it using event function
+        let studentPopup = studentHouse.bindPopup(studentPoup)
 
         studentHouse.on("click", function(ev){
-            studentHouse.bindPopup(studentPoup).openPopup()
+            studentPopup.openPopup();
            
             
             
@@ -81,25 +83,82 @@ fetch("data/wholeNepal.geojson")
 
 });
 
+
+var schoolLayer = L.layerGroup();
+
+fetch("data/school.geojson")
+            .then(response =>{return response.json()})
+            .then(data=> { school= L.geoJSON(data);
+                schoolLayer.addLayer(school);
+                
+});
 // api for weather
 
-axios.get('https://api.openweathermap.org/data/2.5/weather?q=Kathmandu,np&appid=16a2508dc0d12c0ec8438cd2681d164b')
+map.on('click', function(ev) {
+    axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${ev.latlng.lat}&lon=${ev.latlng.lng}&appid=16a2508dc0d12c0ec8438cd2681d164b`)
+      .then(function(response) {
+        // Iterate over the weather array and log the main weather condition
+        const weatherPopup = `
+        <div style="background: linear-gradient(135deg,#00feba,#5b548a);
+          width :250px;
+          color: white;
+          padding: 10px;
+          border-radius: 8px;
+          text-align: center;">
+          <img src="data/rain.png" class="weather-icon" alt="Weather icon" style="width: 50px;">
 
-  .then(function (response) {
-    // handle success
-    console.log(response);
-  })
-  .catch(function (error) {
-    // handle error
-    console.log(error);
-  })
-  .finally(function () {
-    // always executed
+
+            <h1 style="font-size: 30px;">${(response.data.main.temp - 273.15).toFixed(1)}°C</h1>
+
+
+            <h2>${response.data.name}</h2>
+
+
+            <div style="display: flex; justify-content: space-between; margin-top: 10px;">
+
+
+                <div>
+                    <img src="data/humidity.png" alt="Humidity" style="width: 25px;">
+                    <p>${response.data.main.humidity}% Humidity</p>
+                </div>
+
+
+                <div>
+                    <img src="data/wind.png" alt="Wind" style="width: 25px;">
+                    <p>${response.data.wind.speed} m/s Wind</p>
+                </div>
+            </div>
+        </div>
+    `;
+    L.popup()
+    .setLatLng(ev.latlng)
+    .setContent(weatherPopup)
+    .openOn(map);
+
+        
+      })
+      .catch(function(error) {
+
+        // Handle errors
+        console.log("Error fetching weather data: ", error);
+      })
+      .finally(function() {
+        // Always executed (you can use it for cleanup tasks if needed)
+      });
+      
+      
+
   });
+
+  
+  
+
+
+
 
 
 var baseLayers= {"OSM":osm }
-var overLays = {"Students":myMarkerGroup, "Country":nepalLayer,"Provinces":provincesLayer,"Municipalities":muniLayer, "Districts":districts };
+var overLays = {"Students":myMarkerGroup, "Country":nepalLayer,"Provinces":provincesLayer,"Municipalities":muniLayer, "Districts":districts ,"School":schoolLayer};
 
 
 L.control.layers(baseLayers, overLays).addTo(map);
