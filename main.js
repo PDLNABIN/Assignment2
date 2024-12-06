@@ -93,7 +93,7 @@ fetch("data/school.geojson")
                 
 });
 // api for weather
-
+var waetherLayer= L.layerGroup();
 map.on('click', function(ev) {
     axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${ev.latlng.lat}&lon=${ev.latlng.lng}&appid=16a2508dc0d12c0ec8438cd2681d164b`)
       .then(function(response) {
@@ -135,6 +135,7 @@ map.on('click', function(ev) {
     .setContent(weatherPopup)
     .openOn(map);
 
+waetherLayer.addLayer(weatherPopup)
         
       })
       .catch(function(error) {
@@ -150,6 +151,24 @@ map.on('click', function(ev) {
 
   });
 
+  axios.get("https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=XBmfhVW1tlgrmbvTVrAFd2ZarVvLwGPg&point=27.7172,85.3240")
+  .then(function (response) {
+    // handle success
+    console.log(response);
+  })
+  .catch(function (error) {
+    // handle error
+    console.log(error);
+  })
+  .finally(function () {
+    // always executed
+  });
+
+  
+
+
+  
+
   
   
 
@@ -158,7 +177,7 @@ map.on('click', function(ev) {
 
 
 var baseLayers= {"OSM":osm }
-var overLays = {"Students":myMarkerGroup, "Country":nepalLayer,"Provinces":provincesLayer,"Municipalities":muniLayer, "Districts":districts ,"School":schoolLayer};
+var overLays = {"Students":myMarkerGroup, "Country":nepalLayer,"Provinces":provincesLayer,"Municipalities":muniLayer, "Districts":districts ,"School":schoolLayer, "weather":waetherLayer};
 
 
 L.control.layers(baseLayers, overLays).addTo(map);
