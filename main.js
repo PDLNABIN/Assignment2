@@ -28,7 +28,7 @@ fetch("data/students.geojson").then(response=>{
         <h4>Name:${studentName}</h4>
         <h4> Roll No:${rollNo}</h4>
         <h4>District:${districtStudent} </h4>
-        <h4> District:${municipality}</h4>
+        <h4> Municipality:${municipality}</h4>
 
         </div>`
 
@@ -93,8 +93,9 @@ fetch("data/school.geojson")
                 
 });
 // api for weather
-var waetherLayer= L.layerGroup();
+var weatherLayer= L.layerGroup();
 map.on('click', function(ev) {
+    if(map.hasLayer(weatherLayer)){
     axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${ev.latlng.lat}&lon=${ev.latlng.lng}&appid=16a2508dc0d12c0ec8438cd2681d164b`)
       .then(function(response) {
         // Iterate over the weather array and log the main weather condition
@@ -130,12 +131,12 @@ map.on('click', function(ev) {
             </div>
         </div>
     `;
-    L.popup()
+    var myWeather=L.popup()
     .setLatLng(ev.latlng)
     .setContent(weatherPopup)
-    .openOn(map);
+    .openOn(weatherLayer);
 
-waetherLayer.addLayer(weatherPopup)
+weatherLayer.addLayer(myWeather);
         
       })
       .catch(function(error) {
@@ -146,6 +147,9 @@ waetherLayer.addLayer(weatherPopup)
       .finally(function() {
         // Always executed (you can use it for cleanup tasks if needed)
       });
+    }
+
+
 
 
 
@@ -159,7 +163,7 @@ waetherLayer.addLayer(weatherPopup)
 var speciesLayer = L.layerGroup();
   axios.get("https://api.gbif.org/v1/occurrence/search?country=NP&format=geojson")
             .then(response => {
-                const data = response.data.results; // The results array
+                const data = response.data.results;
                
                     data.forEach(item => {
                         const lat = item.decimalLatitude;
@@ -170,7 +174,7 @@ var speciesLayer = L.layerGroup();
                         
                         
                     var speciesMarker = L.marker([lat, lon])
-                    .addTo(map)
+            
                     .bindPopup(`
                         <strong>Species:</strong> ${species}<br>
                         <strong>Location:</strong> ${item.verbatimLocality}<br>
@@ -199,7 +203,7 @@ var speciesLayer = L.layerGroup();
 
 
 var baseLayers= {"OSM":osm }
-var overLays = {"Students":myMarkerGroup, "Country":nepalLayer,"Provinces":provincesLayer,"Municipalities":muniLayer, "Districts":districts ,"School":schoolLayer, "weather":waetherLayer , "species": speciesLayer};
+var overLays = {"Students":myMarkerGroup, "Country":nepalLayer,"Provinces":provincesLayer,"Municipalities":muniLayer, "Districts":districts ,"School":schoolLayer, "weather":weatherLayer , "species": speciesLayer};
 
 
 L.control.layers(baseLayers, overLays).addTo(map);
