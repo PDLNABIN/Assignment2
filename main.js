@@ -5,7 +5,7 @@ var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 var personIcon = myIcon = L.icon({
     iconUrl: 'data/person.png',
-    iconSize: [38, 35]})
+    iconSize: [50, 50]})
 
 var myMarkerGroup= L.layerGroup();
 
@@ -89,6 +89,7 @@ var schoolIcon= L.icon({iconUrl: "data/school.png",
 
 })
 var schoolLayer = L.layerGroup();
+var circleLayer = L.layerGroup();
 
 fetch("data/school.geojson")
             .then(response =>{return response.json()})
@@ -100,12 +101,35 @@ fetch("data/school.geojson")
                     let schoolName=schools.properties.name;
                     let schoolType=schools.properties.amenity;
 
-                    let schoolMarker= L.marker([lat, lng],{icon:schoolIcon}).bindPopup(` <strong>School:</strong>${schoolName}<br>
+                    L.marker([lat, lng],{icon:schoolIcon}).bindPopup(` <strong>School:</strong>${schoolName}<br>
                        <strong>Type:</strong> ${schoolType} `). addTo(schoolLayer)
 
                 })
+
+
+                // create another layer
+
+                
+                var circle = L.circle([27.6748, 85.4427], {
+                    color: 'red',
+                    fillColor: '#f03',
+                    fillOpacity: 0.5,
+                    radius: 7500
+                }).bindTooltip("This is the 7.5 Km cirlce around Suryabinyak").openTooltip();
+                circleLayer.addLayer(circle);
+
+                schoolLayer.addLayer(circleLayer);
+
+
+
+
                 
 });
+
+
+
+
+
 // api for weather
 var weatherLayer= L.layerGroup();
 map.on('click', function(ev) {
@@ -221,13 +245,14 @@ var speciesLayer = L.layerGroup();
 
 
 var baseLayers= {"OSM":osm }
-var overLays = {"Students":myMarkerGroup, "Country":nepalLayer,"Provinces":provincesLayer,"Municipalities":muniLayer, "Districts":districts ,"School":schoolLayer, "weather":weatherLayer , "species": speciesLayer};
+var overLays = {"Students":myMarkerGroup, "Country":nepalLayer,"Provinces":provincesLayer,"Municipalities":muniLayer, "Districts":districts ,"School":schoolLayer,"Custom OverLay":circleLayer, "weather":weatherLayer , "species": speciesLayer};
 
 
 L.control.layers(baseLayers, overLays).addTo(map);
 
 
-
+//https://api.gbif.org/v1/occurrence/search?taxon_key=1802189 (tiger occurance)
+//https://api.gbif.org/v1/occurrence/search?country=NP&year=2000,2020&taxon_key=212 for bird 
 
 
 
