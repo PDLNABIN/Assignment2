@@ -98,10 +98,11 @@ map.on('click', function(ev) {
     if(map.hasLayer(weatherLayer)){
     axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${ev.latlng.lat}&lon=${ev.latlng.lng}&appid=16a2508dc0d12c0ec8438cd2681d164b`)
       .then(function(response) {
-        // Iterate over the weather array and log the main weather condition
+        
         const weatherPopup = `
         <div style="background: linear-gradient(135deg,#00feba,#5b548a);
-          width :250px;
+          width :200px;
+          
           color: white;
           padding: 10px;
           border-radius: 8px;
@@ -109,7 +110,8 @@ map.on('click', function(ev) {
           
 
 
-            <h1 style="font-size: 30px;">${(response.data.main.temp - 273.15).toFixed(1)}°C</h1>
+            <h1 style="font-size: 30px; padding-buttom:5px; margin-buttom: 20px;">${(response.data.main.temp - 273).toFixed(0)}°C</h1>
+            <h3 style= "padding:5px"> ${response.data.weather[0].main}</h4>
 
 
             <h2>${response.data.name}</h2>
@@ -126,7 +128,7 @@ map.on('click', function(ev) {
 
                 <div>
                     <img src="data/wind.png" alt="Wind" style="width: 25px;">
-                    <p>${response.data.wind.speed} m/s Wind</p>
+                    <p>${response.data.wind.speed} km/h <b> Wind</p>
                 </div>
             </div>
         </div>
@@ -142,10 +144,11 @@ weatherLayer.addLayer(myWeather);
       .catch(function(error) {
 
         // Handle errors
-        console.log("Error fetching weather data: ", error);
+        console.log("Error Fetching Weather Data: ", error);
       })
       .finally(function() {
-        // Always executed (you can use it for cleanup tasks if needed)
+        console.log("Weather Displayed Successfully")
+        
       });
     }
 
@@ -179,6 +182,7 @@ var speciesLayer = L.layerGroup();
                         <strong>Species:</strong> ${species}<br>
                         <strong>Location:</strong> ${item.verbatimLocality}<br>
                         <strong>Recorded By:</strong> ${item.recordedBy}<br>
+                        <strong> Event Date: </strong> ${item.verbatimEventDate}<br>
                         <img src = ${image} style = "width:100px;height:auto;">
                                 `);
                     speciesLayer.addLayer(speciesMarker);  
