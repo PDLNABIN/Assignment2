@@ -83,13 +83,27 @@ fetch("data/wholeNepal.geojson")
 
 });
 
+var schoolIcon= L.icon({iconUrl: "data/school.png",
+    iconSize:     [30,30]
 
+
+})
 var schoolLayer = L.layerGroup();
 
 fetch("data/school.geojson")
             .then(response =>{return response.json()})
-            .then(data=> { school= L.geoJSON(data);
-                schoolLayer.addLayer(school);
+            .then(data=> { 
+                school= L.geoJSON(data);
+                 data.features.forEach(function(schools){
+                    let lat = schools.geometry.coordinates[1];
+                    let lng = schools.geometry.coordinates[0];
+                    let schoolName=schools.properties.name;
+                    let schoolType=schools.properties.amenity;
+
+                    let schoolMarker= L.marker([lat, lng],{icon:schoolIcon}).bindPopup(` <strong>School:</strong>${schoolName}<br>
+                       <strong>Type:</strong> ${schoolType} `). addTo(schoolLayer)
+
+                })
                 
 });
 // api for weather
