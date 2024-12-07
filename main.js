@@ -146,23 +146,45 @@ waetherLayer.addLayer(weatherPopup)
       .finally(function() {
         // Always executed (you can use it for cleanup tasks if needed)
       });
+
+
+
+      
       
       
 
   });
 
-  axios.get("https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=XBmfhVW1tlgrmbvTVrAFd2ZarVvLwGPg&point=27.7172,85.3240")
-  .then(function (response) {
-    // handle success
-    console.log(response);
-  })
-  .catch(function (error) {
-    // handle error
-    console.log(error);
-  })
-  .finally(function () {
-    // always executed
-  });
+  
+var speciesLayer = L.layerGroup();
+  axios.get("https://api.gbif.org/v1/occurrence/search?country=NP&format=geojson")
+            .then(response => {
+                const data = response.data.results; // The results array
+               
+                    data.forEach(item => {
+                        const lat = item.decimalLatitude;
+                        const lon = item.decimalLongitude;
+                        const species = item.scientificName;
+                        const image = item.media[0].identifier;
+
+                        
+                        
+                    var speciesMarker = L.marker([lat, lon])
+                    .addTo(map)
+                    .bindPopup(`
+                        <strong>Species:</strong> ${species}<br>
+                        <strong>Location:</strong> ${item.verbatimLocality}<br>
+                        <strong>Recorded By:</strong> ${item.recordedBy}<br>
+                        <img src = ${image} style = "width:100px;height:auto;">
+                                `);
+                    speciesLayer.addLayer(speciesMarker);  
+                    });
+                    
+                
+            })
+            .catch(error => {
+                console.error('Error fetching GBIF data:', error);
+            });
 
   
 
@@ -177,7 +199,7 @@ waetherLayer.addLayer(weatherPopup)
 
 
 var baseLayers= {"OSM":osm }
-var overLays = {"Students":myMarkerGroup, "Country":nepalLayer,"Provinces":provincesLayer,"Municipalities":muniLayer, "Districts":districts ,"School":schoolLayer, "weather":waetherLayer};
+var overLays = {"Students":myMarkerGroup, "Country":nepalLayer,"Provinces":provincesLayer,"Municipalities":muniLayer, "Districts":districts ,"School":schoolLayer, "weather":waetherLayer , "species": speciesLayer};
 
 
 L.control.layers(baseLayers, overLays).addTo(map);
