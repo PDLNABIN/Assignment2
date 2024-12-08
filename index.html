@@ -20,8 +20,28 @@
     
 </head>
 <body>
+    
     <div id="map"></div>
-    <h2 class="overlayText">This map contains admistrative boundries of Nepal, GE students Locations, Weather Popup and Species occurrance Locations and their infos as Popup © Nabin Poudel</h2>
+    <h2 class="overlayText">This map contains admistrative boundries of Nepal, GE students Locations, Weather Popup and Species occurrance Locations and their infos as Popup</h2>
+    <div id="weather-popup-template" style="display:none;">
+        <div style="background: linear-gradient(135deg, #00feba, #5b548a);
+                    width: 200px; color: white; padding: 10px;
+                    border-radius: 8px; text-align: center;">
+            <h1 id="temp" style="font-size: 30px; padding-bottom: 5px; margin-bottom: 20px;"></h1>
+            <h3 id="weather-main" style="padding: 5px;"></h3>
+            <h2 id="location"></h2>
+            <div style="display: flex; justify-content: space-between; margin-top: 10px;">
+                <div>
+                    <img src="data/humidity.png" alt="Humidity" style="width: 25px;">
+                    <p id="humidity-text"></p>
+                </div>
+                <div>
+                    <img src="data/wind.png" alt="Wind" style="width: 25px;">
+                    <p id="wind-text"></p>
+                </div>
+            </div>
+        </div>
+    </div>
     
     
    
@@ -45,6 +65,7 @@
         overflow: hidden;
     
     }
+    
         
     
     
