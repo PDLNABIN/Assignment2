@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment-2</title>
-    <link rel="stylesheet" href="style.css">
+    
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
      crossorigin=""/>
@@ -15,22 +15,43 @@
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
     crossorigin=""></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.23.0/maps/maps-web.min.js'></script>
-    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
-    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
-    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
-    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+    
 
     
 </head>
 <body>
-    
     <div id="map"></div>
+    <h2 class="overlayText">This map contains admistrative boundries of Nepal, GE students Locations, Weather Popup and Species occurrance Locations and their infos as Popup © Nabin Poudel</h2>
+    
+    
    
     
     <style>#map {
-        height: 100vh;
-      }</style>
+        height: 100vh; 
+        width: 100%;
+    }
+    
+    .overlayText {
+        position: absolute; 
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: Arial, sans-serif; 
+        font-size:11px;
+        color: #614848;
+        background-color: transparent; 
+        z-index: 1000; 
+        white-space: nowrap;
+        overflow: hidden;
+    
+    }
+        
+    
+    
+      
+      
+      
+      </style>
     
     
     <script src = "main.js"></script>

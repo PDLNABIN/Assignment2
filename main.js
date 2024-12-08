@@ -3,6 +3,11 @@ var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
+
+L.control.scale({position:"topleft"}).addTo(map);
+
+
+
 var personIcon = myIcon = L.icon({
     iconUrl: 'data/person.png',
     iconSize: [50, 50]})
@@ -53,15 +58,23 @@ var districts = L.layerGroup();
     
  fetch("data/districts.geojson")
                 .then(response =>{return response.json()})
-                .then(data=> { let district= L.geoJSON(data);
+                .then(data=> { let district= L.geoJSON(data,{onEachFeature:function(feature, layer){
+                    layer.bindPopup(`${feature.properties.shapeName}`);
+
+                    
+                }});
                     districts.addLayer(district);
+
+
 
                 });
 var muniLayer = L.layerGroup();
 
 fetch("data/municipality.geojson")
             .then(response =>{return response.json()})
-            .then(data=> { let minicipalities= L.geoJSON(data);
+            .then(data=> { let minicipalities= L.geoJSON(data, {onEachFeature:function(feature, layer){
+                layer.bindPopup(`${feature.properties.GaPa_NaPa}`)
+            }});
                 muniLayer.addLayer(minicipalities);
 
 });
@@ -69,7 +82,9 @@ var provincesLayer = L.layerGroup();
 
 fetch("data/provinces.geojson")
             .then(response =>{return response.json()})
-            .then(data=> { let province= L.geoJSON(data);
+            .then(data=> { let province= L.geoJSON(data,{onEachFeature:function(feature, layer){
+                layer.bindPopup(`${feature.properties.PR_NAME}`)
+            }});
                 provincesLayer.addLayer(province);
 
 });
@@ -84,7 +99,7 @@ fetch("data/wholeNepal.geojson")
 });
 
 var schoolIcon= L.icon({iconUrl: "data/school.png",
-    iconSize:     [30,30]
+    iconSize:[30,30]
 
 
 })
@@ -106,19 +121,7 @@ fetch("data/school.geojson")
 
                 })
 
-
-                // create another layer
-
                 
-                var circle = L.circle([27.6748, 85.4427], {
-                    color: 'red',
-                    fillColor: '#f03',
-                    fillOpacity: 0.5,
-                    radius: 7500
-                }).bindTooltip("This is the 7.5 Km cirlce around Suryabinyak").openTooltip();
-                circleLayer.addLayer(circle);
-
-                schoolLayer.addLayer(circleLayer);
 
 
 
@@ -235,8 +238,8 @@ var speciesLayer = L.layerGroup();
   
 
 
-  
-
+        
+            
   
   
 
@@ -245,14 +248,17 @@ var speciesLayer = L.layerGroup();
 
 
 var baseLayers= {"OSM":osm }
-var overLays = {"Students":myMarkerGroup, "Country":nepalLayer,"Provinces":provincesLayer,"Municipalities":muniLayer, "Districts":districts ,"School":schoolLayer,"Custom OverLay":circleLayer, "weather":weatherLayer , "species": speciesLayer};
+var overLays = {"Students":myMarkerGroup, "Country":nepalLayer,"Provinces":provincesLayer,"Municipalities":muniLayer, "Districts":districts ,"School":schoolLayer, "weather":weatherLayer , "species": speciesLayer};
 
 
-L.control.layers(baseLayers, overLays).addTo(map);
+L.control.layers(baseLayers, overLays,{collapsed:false}).addTo(map);
+
+
 
 
 //https://api.gbif.org/v1/occurrence/search?taxon_key=1802189 (tiger occurance)
-//https://api.gbif.org/v1/occurrence/search?country=NP&year=2000,2020&taxon_key=212 for bird 
+//https://api.gbif.org/v1/occurrence/search?country=NP&year=2000,2020&taxon_key=212 for bird occurance
+//https://api.inaturalist.org/v1/observations?nelat=30.4815&nelng=88.2033&swlat=26.3289&swlng=80.0556&per_page=200 
 
 
 
