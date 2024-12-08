@@ -256,9 +256,7 @@ L.control.layers(baseLayers, overLays,{collapsed:false}).addTo(map);
 
 
 
-//https://api.gbif.org/v1/occurrence/search?taxon_key=1802189 (tiger occurance)
-//https://api.gbif.org/v1/occurrence/search?country=NP&year=2000,2020&taxon_key=212 for bird occurance
-//https://api.inaturalist.org/v1/observations?nelat=30.4815&nelng=88.2033&swlat=26.3289&swlng=80.0556&per_page=200 
+
 
 
 
