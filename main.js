@@ -4,17 +4,20 @@ var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
+
+
 L.control.scale({position:"topleft"}).addTo(map);
 
 
 
-var personIcon = myIcon = L.icon({
+var myIcon = L.icon({
     iconUrl: 'data/person.png',
-    iconSize: [50, 50]})
+    iconSize: [50, 50]});
 
 var myMarkerGroup= L.layerGroup();
 
 fetch("data/students.geojson").then(response=>{
+
    return response.json();
 }).then(data=>{
     data.features.forEach(feature => {
@@ -29,13 +32,11 @@ fetch("data/students.geojson").then(response=>{
         var municipality= feature.properties.Municipality;
 
         var districtStudent= feature.properties.District;
-        var studentPoup= `<div>
-        <h4>Name:${studentName}</h4>
-        <h4> Roll No:${rollNo}</h4>
-        <h4>District:${districtStudent} </h4>
-        <h4> Municipality:${municipality}</h4>
-
-        </div>`
+        var studentPoup= `
+        <p>Name:${studentName}</p>
+        <p> Roll No:${rollNo}<p>
+        <p>District:${districtStudent} </p>
+        <p> Municipality:${municipality}</p>`
 
        
 
